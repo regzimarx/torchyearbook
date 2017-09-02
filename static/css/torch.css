@@ -26,16 +26,17 @@ body {
 /* line 30, ../sass/torch.scss */
 .navbar .navbar-collapse .navbar-nav li a {
   color: #ffffff;
+  line-height: 34px;
 }
 
-/* line 38, ../sass/torch.scss */
+/* line 39, ../sass/torch.scss */
 .panel {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* + BUTTONS
 ===================================== */
-/* line 46, ../sass/torch.scss */
+/* line 47, ../sass/torch.scss */
 .btn {
   font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial', sans-serif;
   font-size: 16px;
@@ -56,7 +57,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* line 66, ../sass/torch.scss */
+/* line 67, ../sass/torch.scss */
 .btn:focus,
 .btn:active,
 .btn.active,
@@ -69,13 +70,13 @@ body {
   box-shadow: none;
 }
 
-/* line 78, ../sass/torch.scss */
+/* line 79, ../sass/torch.scss */
 .btn-default,
 .btn-link {
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 83, ../sass/torch.scss */
+/* line 84, ../sass/torch.scss */
 .btn-default:hover,
 .btn-link:hover,
 .btn-default:focus,
@@ -86,7 +87,7 @@ body {
 
 /* + RIPPLE EFFECT
 ===================================== */
-/* line 97, ../sass/torch.scss */
+/* line 98, ../sass/torch.scss */
 .btn-ripple {
   position: relative;
   overflow: hidden;
@@ -97,7 +98,7 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 107, ../sass/torch.scss */
+/* line 108, ../sass/torch.scss */
 .ripple {
   display: block;
   position: absolute;
@@ -112,7 +113,7 @@ body {
   opacity: 1;
 }
 
-/* line 121, ../sass/torch.scss */
+/* line 122, ../sass/torch.scss */
 .ripple.animate {
   -webkit-animation: ripple .5s linear;
   -moz-animation: ripple .5s linear;
@@ -168,14 +169,14 @@ body {
   }
 }
 /*  Buttons types */
-/* line 183, ../sass/torch.scss */
+/* line 184, ../sass/torch.scss */
 .btn-raised {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
 }
 
-/* line 189, ../sass/torch.scss */
+/* line 190, ../sass/torch.scss */
 .btn-raised:active,
 .btn-raised.active,
 .btn-raised:active:focus,
@@ -185,7 +186,7 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 198, ../sass/torch.scss */
+/* line 199, ../sass/torch.scss */
 .btn-raised:focus {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
