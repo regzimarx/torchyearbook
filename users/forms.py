@@ -13,13 +13,11 @@ class RegisterForm(forms.ModelForm):
         }
 
     def save(self):
-        extra = self.cleaned_data
         User.objects.create_user(
             self.cleaned_data.get('email'),
             self.cleaned_data.get('first_name'),
             self.cleaned_data.get('last_name'),
             self.cleaned_data.get('password'),
-            **extra_data,
         )
 
 
