@@ -126,3 +126,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Custom User Model
 AUTH_USER_MODEL = 'users.User'
+
+# Allow any settings to be defined in local_settings.py which should be
+# ignored in your version control system allowing for settings to be
+# defined per machine.
+try:
+    from .local import *
+except ImportError as e:
+    if "local" not in str(e):
+        raise e

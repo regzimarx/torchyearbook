@@ -31,6 +31,11 @@ class LoginForm(forms.Form):
 class AccountForm(forms.ModelForm):
     """ Form for account """
 
+    email = forms.EmailField(required=False)
+    middle_name = forms.CharField(required=False)
+    affiliations = forms.CharField(widget=forms.Textarea, required=False)
+    awards = forms.CharField(widget=forms.Textarea, required=False)
+
     class Meta:
         model = User
         fields = ('email', 'first_name', 'middle_name', 'last_name', 'nick_name',
