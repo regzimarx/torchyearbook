@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load widget_tweaks %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col m6 offset-m3">
+            <div class="card">
+                <div class="card-content">
+                    <form action="{% url 'account:update_profile' %}" method="post">
+                        {% csrf_token %} {% for field in form.visible_fields %}
+                        <div class="input-field">
+                            <label>{{ field.label }}</label>
+                            {{ field | add_class:'form-control' }}
+                        </div>
+                        {% endfor %}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block green">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

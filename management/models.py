@@ -20,13 +20,3 @@ class Course(models.Model):
 
     def __str__(self):
         return '{}'.format(self.name)
-
-
-class Batch(models.Model):
-    """ Model for Batch """
-
-    batch_year = models.IntegerField()
-    graduates = models.ManyToManyField('users.User')
-
-    def __str__(self):
-        return '{}'.format(self.batch_year)

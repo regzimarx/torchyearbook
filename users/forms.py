@@ -41,3 +41,8 @@ class AccountForm(forms.ModelForm):
         fields = ('email', 'first_name', 'middle_name', 'last_name', 'nick_name',
             'department', 'course', 'birthdate', 'mobile_number', 'age', 'father_name',
             'mother_maiden_name', 'address', 'affiliations', 'awards',)
+
+    def __init__(self, *args, **kwargs):
+        super(AccountForm, self).__init__(*args, **kwargs)
+        self.fields['affiliations'].widget.attrs['class'] = 'materialize-textarea'
+        self.fields['awards'].widget.attrs['class'] = 'materialize-textarea'

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load widget_tweaks %} {% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col m6 offset-m3">
+            <div class="card">
+                <div class="card-content">
+                    <h5>Hi {{ user.get_short_name }}!</h5>
+                    <p>First name: {{ user.first_name }}</p>
+                    <p>Middle name: {{ user.middle_name }}</p>
+                    <p>Last name: {{ user.last_name }}</p>
+                    <p>Nick name: {{ user.nick_name }}</p>
+                    <p>Department: {{ user.department }}</p>
+                    <p>Course: {{ user.course }}</p>
+                    <p>Birthdate: {{ user.birthdate }}</p>
+                    <p>Mobile number: {{ user.mobile_number }}</p>
+                    <p>Age: {{ user.age }}</p>
+                    <p>Father's name: {{ user.father_name }}</p>
+                    <p>Mother's maiden name: {{ user.mother_maiden_name }}</p>
+                    <p>Address: {{ user.address }}</p>
+                    <p>Affiliations: {{ user.affiliations }}</p>
+                    <p>Awards: {{ user.awards }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

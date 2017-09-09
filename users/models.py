@@ -25,6 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     email = models.EmailField(unique=True)
+    username = models.CharField(max_length=50, null=True, blank=True)
     first_name = models.CharField(max_length=100, null=True)
     middle_name = models.CharField(max_length=100, null=True)
     last_name = models.CharField(max_length=100, null=True)
@@ -46,6 +47,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     role = models.CharField(max_length=7, choices=LIST_OF_ROLES, default=REGULAR)
     gender = models.CharField(max_length=6, choices=LIST_OF_GENDER, default=MALE)
 
+    date_joined = models.DateTimeField()
+
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
@@ -58,7 +61,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         return '{} {}'.format(self.first_name, self.last_name)
 
     def get_short_name(self):
-        return self.first_name
+        return '{}'.format(self.first_name)
+
+    def get_full_name(self):
+        return '{} {}'.format(self.first_name, self.last_name)
 
 # Steps
 # 1. Import `AbstractBaseUser` which has the core implementation for a user model
