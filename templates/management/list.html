@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col m12">
+                <br><br><br>
+                <div class="card">
+                    <div class="card-content">
+                        <table class="bordered striped highlight responsive-table">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Department</th>
+                              <th>Course</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          {% for profile in profiles %}
+                            <tr>
+                            <td>{{ profile.get_full_name}}</td>
+                            <td>{{ profile.department }}</td>
+                            <td>{{ profile.course }}</td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
